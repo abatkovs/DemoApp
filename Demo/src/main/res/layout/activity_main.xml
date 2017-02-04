@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:theme="@style/AppTheme"
+    android:id="@+id/edit_message">
+
+    <TextView
+        android:text="Team A"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txt_teamA"
+        android:textSize="30sp" />
+
+    <TextView
+        android:text="Score :"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txt_scoreA"
+        android:textSize="25sp"
+        android:layout_below="@+id/txt_teamA"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="Score :"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txt_scoreB"
+        android:textSize="25sp"
+        android:layout_below="@+id/txt_teamB"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="Team B"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txt_teamB"
+        android:textSize="30sp"
+        android:layout_below="@+id/txt_scoreA"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:text="Accept"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/accept"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="37dp"
+        android:onClick="sendMessage" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:text="name of MVP"
+        android:ems="10"
+        android:id="@+id/name"
+        android:layout_below="@+id/txt_scoreB"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="54dp"
+        android:hint="name of MVP" />
+
+    <TextView
+        android:text="Score K/D/A"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/name"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/txt_tipKDA"
+        android:textSize="20sp" />
+
+    <EditText
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/kills"
+        android:layout_alignBaseline="@+id/txt_tipKDA"
+        android:layout_alignBottom="@+id/txt_tipKDA"
+        android:layout_toRightOf="@+id/txt_tipKDA"
+        android:hint="K"
+        android:singleLine="true"
+        android:selectAllOnFocus="true"
+        android:text="0" />
+
+    <EditText
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/deaths"
+        android:hint="D"
+        android:singleLine="true"
+        android:selectAllOnFocus="true"
+        android:text="0"
+        android:layout_alignBaseline="@+id/kills"
+        android:layout_alignBottom="@+id/kills"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/assists"
+        android:hint="A"
+        android:singleLine="true"
+        android:selectAllOnFocus="true"
+        android:text="0"
+        android:layout_alignBaseline="@+id/kills"
+        android:layout_alignBottom="@+id/kills"
+        android:layout_toRightOf="@+id/deaths"
+        android:layout_toEndOf="@+id/deaths" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:layout_below="@+id/txt_teamA"
+        android:layout_toRightOf="@+id/txt_scoreA"
+        android:layout_toEndOf="@+id/txt_scoreA"
+        android:id="@+id/scoreA"
+        android:text="0" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/scoreB"
+        android:layout_below="@+id/txt_teamB"
+        android:layout_toRightOf="@+id/txt_scoreB"
+        android:layout_toEndOf="@+id/txt_scoreB"
+        android:text="0" />
+
+</RelativeLayout>
